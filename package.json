@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/juanpablex/reactcharts.git",
+  "homepage": "https://juanpablex.github.io/reactcharts/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
