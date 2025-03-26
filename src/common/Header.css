@@ -1,0 +1,44 @@
+/* Estilos para el Header */
+.header {
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    padding-left: 20px;
+    width: 100%; /* Asegura que el header tenga el ancho completo de la pantalla */
+    height: 45px; /* Alto fijo del header */
+    display: flex;
+    justify-content: left; /* Espaciado entre logo y menú */
+    align-items: center; /* Centra el contenido verticalmente */
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Alinea el header a la parte superior de la pantalla */
+    left: 0; /* Asegura que el header empiece desde el borde izquierdo */
+  }
+  
+  /* Estilo para el logo */
+  .logo h1 {
+    margin: 0;
+    font-size: 1.8rem; /* Tamaño del texto */
+  }
+  
+  /* Estilo para la barra de navegación */
+  .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navigation li {
+    margin-right: 20px;
+  }
+  
+  .navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding-right: 20px;
+  }
+  
+  .navigation a:hover {
+    text-decoration: underline;
+  }
+  
