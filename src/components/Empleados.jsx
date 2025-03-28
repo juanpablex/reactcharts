@@ -82,9 +82,9 @@ const Empleados = () => {
       margen={margen}
       margenPorcentaje={margenPorcentaje}
       />
-      <div style={{ display: "grid", gap: "20px", gridTemplateColumns: "repeat(3, 1fr)", padding: "20px" }}>
+      <div style={{ display: "grid", gap: "20px", gridTemplateColumns: "repeat(4, 1fr)", padding: "20px" }}>
         <Grafica chartType="line" data={line} options={options} />
-        <Grafica chartType="bar" data={bar} options={options} />
+        <Grafica chartType="bar" data={bar} options={{...options, indexAxis: "y"}} />
         <Grafica chartType="pie" data={pie} options={options} />
         <Grafica chartType="radar" data={radar} options={options} />
       </div>

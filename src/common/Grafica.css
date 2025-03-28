@@ -1,0 +1,13 @@
+/* Selección de los contenedores del gráfico */
+.chart-container {
+    background-color: #ffffff;  /* Fondo blanco */
+    border-radius: 8px;        /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra ligera */
+    padding: 5px;
+    margin: 10px 0;
+    
+    display: flex;
+    justify-content: center;  /* Centrar la gráfica dentro del contenedor */
+    align-items: center;      /* Asegurarse de que la gráfica esté centrada */
+  }
+  

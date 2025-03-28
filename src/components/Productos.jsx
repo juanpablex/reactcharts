@@ -189,7 +189,7 @@ const Productos = () => {
       margen={margen}
       margenPorcentaje={margenPorcentaje}
       />
-      <div style={{ display: "grid", gap: "20px", gridTemplateColumns: "repeat(3, 1fr)", padding: "20px" }}>
+      <div style={{display: "grid", gap: "20px", gridTemplateColumns: "repeat(4, 1fr)", padding: "20px" }}>
         <Grafica chartType="line" data={line} options={options} />
         <Grafica chartType="bar" data={bar} options={options} />
         <Grafica chartType="doughnut" data={doughnut} options={options} />

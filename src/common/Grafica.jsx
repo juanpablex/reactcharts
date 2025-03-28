@@ -2,6 +2,7 @@ import React from 'react';
 import { Line, Bar, Pie, Radar, Doughnut, PolarArea } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, RadialLinearScale, PointElement, LineElement, ArcElement } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';  
+import './Grafica.css';
 
 // 🔹 Registra los componentes necesarios de Chart.js
 ChartJS.register(
@@ -46,7 +47,8 @@ const Grafica = ({ chartType, data, options }) => {
   }
 
   return (
-    <div style={{ width: "100%", height: "33vh", padding: "10px" }}>
+    //  <div style={{ width: "100%", height: "33vh", padding: "10px" }}>
+    <div className='chart-container'>
       <Chart data={data} options={options} />
     </div>
   );
