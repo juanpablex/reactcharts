@@ -1,4 +1,5 @@
 // src/config/chartOptions.js
+import { Title } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels'; // Asegúrate de importar el plugin
 
 // Configuración de las opciones para los gráficos
@@ -14,6 +15,7 @@ export const options = {
     },
   },
   responsive: true,
+
   scales: {
     x: {
       ticks: {

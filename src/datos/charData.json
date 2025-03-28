@@ -67,37 +67,40 @@
       }
     },
     "productos": {
-      "line": {
-        "labels": ["Enero", "Febrero", "Marzo", "Abril"],
+      "bar": {
+        "labels": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre","Octubre","Noviembre","Diciembre"],
         "datasets": [
           {
-            "label": "Ventas de Productos",
-            "data": [500, 600, 700, 900],
+            "label": "Ventas Mensuales",
+            "data": [500, 600, 700, 900,800,750,600,550,400,600,700,1000    ],
             "fill": true,
-            "borderColor": "rgba(75,192,192,1)",
-            "tension": 0.1
+            "backgroundColor": "rgba(255,99,132,0.2)",
+             "borderColor": "rgba(255,99,132,1)",
+            "borderWidth": 2
           }
         ]
       },
-      "bar": {
+      "barv": {
         "labels": ["Producto A", "Producto B", "Producto C", "Producto D"],
         "datasets": [
           {
             "label": "Ventas por Producto",
-            "data": [150, 200, 250, 300],
-            "backgroundColor": "rgba(255,99,132,0.2)",
-            "borderColor": "rgba(255,99,132,1)",
-            "borderWidth": 1
+            "data": [2500, 1800, 3000, 800],
+            "backgroundColor":"rgba(75,192,192,0.2)",
+            "borderColor": "rgba(75,192,192,1)",
+           
+            "borderWidth": 2
+            
           }
         ]
       },
       "doughnut": {
-        "labels": ["Electrónica", "Ropa", "Comida", "Juguetes"],
+        "labels": ["Debito", "Mercado Pago", "Targeta de Credito", "Transferencia Bancaria", "Efectivo"],
         "datasets": [
           {
             "label": "Categorías de Productos",
-            "data": [35, 25, 20, 20],
-            "backgroundColor": ["#ff6384", "#36a2eb", "#ffcd56", "#4bc0c0"]
+            "data": [1800, 1000, 600, 1200,2500],
+            "backgroundColor": ["#ff6384", "#36a2eb", "#ffcd56", "#4bc0c0","#cf5c9e"]
           }
         ]
       },

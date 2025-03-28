@@ -19,7 +19,7 @@ ChartJS.register(
   ChartDataLabels
 );
 
-const Grafica = ({ chartType, data, options }) => {
+const Grafica = ({ chartType, data, options,titulo }) => {
   let Chart;
   
   // Dependiendo del chartType, asignamos el tipo de gráfico correspondiente
@@ -30,6 +30,9 @@ const Grafica = ({ chartType, data, options }) => {
     case 'bar':
       Chart = Bar;
       break;
+    case 'barv':
+        Chart = Bar;
+        break;
     case 'pie':
       Chart = Pie;
       break;
@@ -49,7 +52,8 @@ const Grafica = ({ chartType, data, options }) => {
   return (
     //  <div style={{ width: "100%", height: "33vh", padding: "10px" }}>
     <div className='chart-container'>
-      <Chart data={data} options={options} />
+       {<h3 className="chart-title">{titulo}</h3>}
+      <Chart data={data} options={options}  />
     </div>
   );
 };

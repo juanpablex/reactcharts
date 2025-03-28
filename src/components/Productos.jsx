@@ -177,10 +177,30 @@ import Summary from "../common/Summary";
 import options from "../config/chartOptions"; // Suponiendo que tienes un archivo con opciones globales
 
 const Productos = () => {
-  const { line, bar, doughnut, polararea } = chartData.productos;
-  const ventasTotales = line.datasets[0].data.reduce((acc, curr) => acc + curr, 0);
-  const margen = 500;  // Este es un ejemplo de cómo manejarlo, cámbialo a tu lógica.
+  const {  bar,barv, doughnut, polararea } = chartData.productos;
+  const ventasTotales = barv.datasets[0].data.reduce((acc, curr) => acc + curr, 0);
+  const margen = 5000;  // Este es un ejemplo de cómo manejarlo, cámbialo a tu lógica.
   const margenPorcentaje = (margen / ventasTotales) * 100;
+  const doughnutOptions = {
+    ...options,
+    plugins: {
+      ...options.plugins,
+      title: {
+        display: true,
+        text: "Categorías de Productos", // Título para el gráfico de doughnut
+      },
+    },
+  };
+  const barOptions = {
+    ...options,
+    plugins: {
+      ...options.plugins,
+      title: {
+        display: true,
+        text: "Ventas Mensuales", // Título para el gráfico de doughnut
+      },
+    },
+  };
   return (
     <div style={{ textAlign: "center", padding: "20px" }}>
       <h2>📊 Gráficos de Productos</h2>
@@ -189,10 +209,10 @@ const Productos = () => {
       margen={margen}
       margenPorcentaje={margenPorcentaje}
       />
-      <div style={{display: "grid", gap: "20px", gridTemplateColumns: "repeat(4, 1fr)", padding: "20px" }}>
-        <Grafica chartType="line" data={line} options={options} />
-        <Grafica chartType="bar" data={bar} options={options} />
-        <Grafica chartType="doughnut" data={doughnut} options={options} />
+      <div style={{display: "grid", gap: "20px", gridTemplateColumns: "repeat(3, 1fr)", padding: "20px" }}>
+        <Grafica chartType="bar" data={bar} options={options} titulo="Ventas Mensuales" />
+        <Grafica chartType="barv" data={barv} options={{...options,indexAxis:"y"}} titulo="Ventas por Producto"/>
+        <Grafica chartType="doughnut" data={doughnut} options={options} titulo="Medios de Pago"/>
         <Grafica chartType="polarArea" data={polararea} options={options} />
       </div>
       <div style={{ marginTop: "20px" }}>
