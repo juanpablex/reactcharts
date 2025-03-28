@@ -4,6 +4,7 @@
   grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas grandes */
   gap: 20px;
   padding: 20px;
+  
 }
 
 /* Estilo de cada gráfico */
